@@ -1,0 +1,517 @@
+/* ================= 60-30-10 NATURAL COLOR PALETTE ================= */
+:root {
+    /* 60% Dominant Neutrals */
+    --bg-canvas: #F8FAFC;
+    --bg-surface: #FFFFFF;
+
+    /* 30% Secondary Brand Color (Trustworthy Laundry Blue) */
+    --brand-primary: #1B4F72;
+    --brand-primary-dark: #143D59;
+
+    /* 10% Accent Color (Natural Fresh Aqua-Teal — CTAs Only) */
+    --accent-cta: #0F766E;
+    --accent-cta-hover: #0B5E58;
+
+    /* Supporting Functional Shades */
+    --text-dark: #1F2937;
+    --text-muted: #4B5563;
+    --border-subtle: #E2E8F0;
+    --hover-tint: #EFF7F6;
+}
+
+/* Reset & Box Model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-canvas);
+    color: var(--text-dark);
+    line-height: 1.65;
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    text-align: center;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: var(--brand-primary);
+}
+
+p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+a {
+    color: var(--brand-primary);
+}
+
+/* ================= HEADER & BRANDING (30% BRAND) ================= */
+header {
+    background-color: var(--brand-primary);
+    color: #FFFFFF;
+    padding: 1rem 5%;
+    display: flex;
+    align-items: center;
+}
+
+.site-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 100%;
+    min-height: 96px;
+    padding: 14px 5%;
+    background-color: var(--brand-primary);
+    color: #FFFFFF;
+    border-bottom: 3px solid var(--accent-cta);
+}
+
+.site-header h1 {
+    margin: 0;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: 0.01em;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.brand-logo img {
+    display: block;
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* ================= MAIN NAVIGATION BAR (60% NEUTRAL) ================= */
+nav,
+.main-navigation {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: block;
+    width: 100%;
+    background-color: var(--bg-surface);
+    border-bottom: 1px solid var(--border-subtle);
+    box-shadow: 0 2px 8px rgba(31, 41, 55, 0.04);
+}
+
+.main-navigation ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 12px 20px;
+    list-style: none;
+}
+
+.main-navigation ul li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navigation ul li a {
+    display: block;
+    padding: 9px 16px;
+    border-radius: 6px;
+    color: var(--brand-primary);
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.main-navigation ul li a:hover,
+.main-navigation ul li a:focus-visible {
+    background-color: var(--hover-tint);
+    color: var(--accent-cta);
+}
+
+/* ================= MAIN LAYOUT & SECTIONS ================= */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+section {
+    margin-bottom: 36px;
+    padding: 28px 24px;
+    max-width: 100%;
+}
+
+article,
+aside {
+    max-width: 100%;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+main img {
+    margin: 20px auto;
+}
+
+/* ================= BUTTONS & CTAs (10% ACCENT) ================= */
+button,
+input[type="submit"],
+input[type="button"],
+.btn,
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.96rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+/* Primary CTA — 10% Accent Color */
+button,
+input[type="submit"],
+input[type="button"],
+.btn,
+.primary-button {
+    background-color: var(--accent-cta);
+    color: #FFFFFF;
+    border: 2px solid var(--accent-cta);
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.btn:hover,
+.primary-button:hover {
+    background-color: var(--accent-cta-hover);
+    border-color: var(--accent-cta-hover);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(15, 118, 110, 0.22);
+}
+
+/* Secondary Button — Clean Neutral + Brand Outline */
+.secondary-button {
+    background-color: var(--bg-surface);
+    color: var(--brand-primary);
+    border: 2px solid var(--brand-primary);
+}
+
+.secondary-button:hover {
+    background-color: var(--brand-primary);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(27, 79, 114, 0.18);
+}
+
+button:focus-visible,
+input[type="submit"]:focus-visible,
+input[type="button"]:focus-visible,
+.btn:focus-visible,
+.primary-button:focus-visible,
+.secondary-button:focus-visible {
+    outline: 3px solid var(--accent-cta);
+    outline-offset: 3px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* ================= SERVICE CARDS GRID ================= */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.service-card {
+    min-width: 0;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 0;
+    box-shadow: 0 2px 10px rgba(31, 41, 55, 0.04);
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--brand-primary);
+    box-shadow: 0 8px 20px rgba(27, 79, 114, 0.1);
+}
+
+.service-card img,
+.service-image {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    margin: 0 auto 18px;
+    transition: transform 0.3s ease;
+}
+
+.service-card img:hover,
+.service-image:hover {
+    transform: scale(1.02);
+}
+
+.service-card h2,
+.service-card h3 {
+    color: var(--brand-primary);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: var(--text-muted);
+    font-size: 0.96rem;
+    margin-bottom: 16px;
+}
+
+.service-link {
+    font-weight: 600;
+    color: var(--accent-cta);
+    text-decoration: none;
+}
+
+.service-link:hover {
+    color: var(--accent-cta-hover);
+    text-decoration: underline;
+}
+
+/* ================= LIVE DATABASE PRICING TABLE ================= */
+#live-rates {
+    scroll-margin-top: 90px;
+}
+
+.rates-card {
+    overflow-x: auto;
+    background-color: var(--bg-surface);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(31, 41, 55, 0.05);
+    border: 1px solid var(--border-subtle);
+    margin-top: 1.5rem;
+}
+
+.rates-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.rates-table thead th {
+    background-color: var(--brand-primary);
+    color: #FFFFFF;
+    font-weight: 600;
+    padding: 14px 16px;
+    border: none;
+    letter-spacing: 0.02em;
+}
+
+.rates-table thead th.text-right,
+.rates-table tbody td.text-right {
+    text-align: right;
+}
+
+.rates-table thead th.text-center,
+.rates-table tbody td.text-center {
+    text-align: center;
+}
+
+.rates-table tbody tr {
+    border-bottom: 1px solid var(--border-subtle);
+    transition: background-color 0.15s ease;
+}
+
+.rates-table tbody tr:nth-child(even) {
+    background-color: var(--bg-canvas);
+}
+
+.rates-table tbody tr:hover {
+    background-color: var(--hover-tint);
+}
+
+.rates-table tbody td {
+    padding: 14px 16px;
+    color: var(--text-dark);
+    vertical-align: middle;
+}
+
+.rates-table tbody td.service-title {
+    font-weight: 600;
+    color: var(--brand-primary);
+}
+
+.rate-price {
+    font-weight: 700;
+    color: var(--accent-cta);
+    font-variant-numeric: tabular-nums;
+}
+
+.rate-cta-btn {
+    display: inline-block;
+    padding: 7px 14px;
+    background-color: var(--accent-cta);
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.rate-cta-btn:hover {
+    background-color: var(--accent-cta-hover);
+    color: #FFFFFF;
+}
+
+.rates-empty {
+    padding: 24px;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+/* ================= FOOTER (30% BRAND) ================= */
+footer {
+    background-color: var(--brand-primary);
+    color: #FFFFFF;
+    border-top: 3px solid var(--accent-cta);
+    padding: 26px 20px;
+    margin-top: auto;
+    text-align: center;
+    line-height: 1.7;
+}
+
+footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+footer a:hover {
+    opacity: 0.85;
+    text-decoration: underline;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 8px 0;
+}
+
+/* ================= RESPONSIVE BREAKPOINTS ================= */
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+}
+
+@media (max-width: 700px) {
+    .site-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .site-header h1 {
+        font-size: 1.35rem;
+        text-align: center;
+    }
+
+    nav,
+    .main-navigation {
+        position: static;
+    }
+
+    .main-navigation ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+    }
+
+    .main-navigation ul li a {
+        text-align: center;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    section {
+        margin-bottom: 20px;
+        padding: 16px;
+    }
+
+    button,
+    input[type="submit"],
+    input[type="button"],
+    .btn,
+    .primary-button,
+    .secondary-button {
+        max-width: 100%;
+        padding: 12px 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+}
