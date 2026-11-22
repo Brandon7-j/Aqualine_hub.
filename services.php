@@ -61,7 +61,7 @@ if ($conn && !$conn->connect_error) {
                         <p>
                             Keep your clothes clean and fresh with our advanced washing service. We sort by fabric type and color, utilizing premium detergents to maintain garment integrity.
                         </p>
-                        <a href="http://127.0.0.1:8000/customer/dashboard" class="service-link">Request This Service &rarr;</a>
+                        <a href="http://127.0.0.1:8000/customer/pickup?service=<?= urlencode('Professional Washing') ?>" class="service-link">Request Pickup &rarr;</a>
                     </div>
                 </article>
 
@@ -75,7 +75,7 @@ if ($conn && !$conn->connect_error) {
                         <p>
                             Get your laundry dried safely using modern tumbling and controlled aeration. Our drying process preserves fabric elasticity and eliminates moisture completely.
                         </p>
-                        <a href="http://127.0.0.1:8000/customer/dashboard" class="service-link">Request This Service &rarr;</a>
+                        <a href="http://127.0.0.1:8000/customer/pickup?service=<?= urlencode('Clothes Drying') ?>" class="service-link">Request Pickup &rarr;</a>
                     </div>
                 </article>
 
@@ -89,7 +89,7 @@ if ($conn && !$conn->connect_error) {
                         <p>
                             Enjoy crisp, razor-sharp creases suitable for corporate work, university lectures, business meetings, and special occasions. Total boardroom readiness guaranteed.
                         </p>
-                        <a href="http://127.0.0.1:8000/customer/dashboard" class="service-link">Request This Service &rarr;</a>
+                        <a href="http://127.0.0.1:8000/customer/pickup?service=<?= urlencode('Ironing and Pressing') ?>" class="service-link">Request Pickup &rarr;</a>
                     </div>
                 </article>
 
@@ -103,7 +103,7 @@ if ($conn && !$conn->connect_error) {
                         <p>
                             Receive neatly stacked, dust-proof packaged laundry that is effortless to organize, store, and unpack. Perfect for busy professionals and students alike.
                         </p>
-                        <a href="http://127.0.0.1:8000/customer/dashboard" class="service-link">Request This Service &rarr;</a>
+                        <a href="http://127.0.0.1:8000/customer/pickup?service=<?= urlencode('Folding and Packaging') ?>" class="service-link">Request Pickup &rarr;</a>
                     </div>
                 </article>
 
@@ -117,7 +117,7 @@ if ($conn && !$conn->connect_error) {
                         <p>
                             Give delicate woolens, silks, traditional regalia, and structured suits specialized dry-cleaning attention with customized solvent treatments.
                         </p>
-                        <a href="http://127.0.0.1:8000/customer/dashboard" class="service-link">Request This Service &rarr;</a>
+                        <a href="http://127.0.0.1:8000/customer/pickup?service=<?= urlencode('Special Garment Care') ?>" class="service-link">Request Pickup &rarr;</a>
                     </div>
                 </article>
             </div>
@@ -157,7 +157,7 @@ if ($conn && !$conn->connect_error) {
                                     <td style="padding: 12px; font-weight: 600;"><?= htmlspecialchars($srv['service_name']) ?></td>
                                     <td style="padding: 12px;"><?= htmlspecialchars($srv['unit']) ?></td>
                                     <td style="padding: 12px; font-weight: 700; color: #0F766E;">KES <?= number_format((float)$srv['unit_price'], 2) ?></td>
-                                    <td style="padding: 12px;"><a href="http://127.0.0.1:8000/customer/dashboard" class="service-link">Order / Track &rarr;</a></td>
+                                    <td style="padding: 12px;"><a href="http://127.0.0.1:8000/customer/pickup?service=<?= urlencode($srv['service_name']) ?>" class="service-link">Request Pickup &rarr;</a></td>
                                 </tr>
                             <?php endforeach; ?>
                         <?php endif; ?>
